@@ -8,9 +8,10 @@ project(NVVL VERSION 1.0 LANGUAGES C CXX CUDA)
 
 include(CheckStructHasMember)
 include(CheckTypeSize)
-
 include(cmake/BuildType.cmake)
 include(cmake/CudaArchFlags.cmake)
+
+add_compile_definitions(_GLIBCXX_USE_CXX11_ABI=0)
 
 # Dependencies
 ##############
